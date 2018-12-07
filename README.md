@@ -1,6 +1,6 @@
 # Riot LoL
 
-> Simplified, up-to-date, League of Legends champions list.
+> Library for Riot's League of Legends Static CDN Data.
 
 
 ## Install
