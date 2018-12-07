@@ -12,7 +12,5 @@ export default {
       babelrc: true
     })
   ],
-  external: [
-    "axios"
-  ]
+  external: ["axios"]
 };

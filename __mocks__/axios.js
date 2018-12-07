@@ -29,8 +29,7 @@ export default ({ method, url }) => {
   return new Promise((resolve, reject) => {
     if (url.match(/\/champion.json$/)) {
       process.nextTick(() => resolve({ data: { data: champions } }));
-    }
-    else {
+    } else {
       const match = url.match(/\/(\w+).json$/)[1];
 
       const champion = `${match.toUpperCase()[0]}${match.slice(1)}`;
