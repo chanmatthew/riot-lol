@@ -36,6 +36,36 @@ lol
     console.log(err);
   });
 //=> sprite CSS of the champion "Aatrox"
+
+lol.getItems().then(items => {
+  console.log(items);
+});
+//=> array of items
+
+lol
+  .getItem({
+    item: "Boots of Speed"
+  })
+  .then(item => {
+    console.log(item.plaintext);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//=> plain text description of the item "Boots of Speed"
+
+// in the case of multiple items having the same name:
+lol
+  .getItem({
+    item: "Enchantment: Warrior"
+  })
+  .then(item => {
+    console.log(item);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//=> array of items with the name "Enchantment: Warrior"
 ```
 
 ## License
