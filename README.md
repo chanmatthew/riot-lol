@@ -73,8 +73,7 @@ lol
 //=> plain text description of the item "Boots of Speed"
 ```
 
-#### `getItem()`
-For the cases in which multiple items share the same name.
+For the cases in which multiple items share the same name:
 
 ```js
 lol
@@ -113,6 +112,31 @@ lol
     console.log(err);
   });
 //=> description of the rune "Lesser Glyph of Attack Damage"
+```
+
+#### `getMasteries()`
+
+```js
+lol.getMasteries().then(masteries => {
+  console.log(masteries);
+});
+//=> array of masteries
+```
+
+#### `getMastery()`
+
+```js
+lol
+  .getMastery({
+    mastery: "Precision"
+  })
+  .then(mastery => {
+    console.log(mastery.description);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//=> array with the descriptions of the mastery "Precision"
 ```
 
 ## License
