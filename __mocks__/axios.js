@@ -39,6 +39,17 @@ const items = {
   }
 };
 
+const runes = {
+  "5011": {
+    name: "Lesser Mark of Health",
+    description: "+1.93 health"
+  },
+  "5031": {
+    name: "Lesser Glyph of Attack Damage",
+    description: "+0.16 attack damage"
+  }
+};
+
 export default ({ method, url }) => {
   return new Promise((resolve, reject) => {
     if (url.match(/\/champion.json$/)) {
@@ -61,6 +72,8 @@ export default ({ method, url }) => {
       );
     } else if (url.match(/\/item.json$/)) {
       process.nextTick(() => resolve({ data: { data: items } }));
+    } else if (url.match(/\/rune.json$/)) {
+      process.nextTick(() => resolve({ data: { data: runes } }));
     }
   });
 };

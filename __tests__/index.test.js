@@ -25,3 +25,15 @@ test("fetches items data from the LoL static data cdn", async () => {
   const items = await lol.getItems();
   return expect(items.length).toBe(2);
 });
+
+test("fetches Lesser Glyph of Attack Damage data from the LoL static data cdn", async () => {
+  const rune = await lol.getRune({
+    rune: "Lesser Glyph of Attack Damage"
+  });
+  return expect(rune.description).toEqual("+0.16 attack damage");
+});
+
+test("fetches runes data from the LoL static data cdn", async () => {
+  const runes = await lol.getRunes();
+  return expect(runes.length).toBe(2);
+});
