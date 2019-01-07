@@ -69,6 +69,19 @@ const masteries = {
   }
 };
 
+const summoners = {
+  SummonerExhaust: {
+    name: "Exhaust",
+    description:
+      "Exhausts target enemy champion, reducing their Movement Speed by 30%, and their damage dealt by 40% for 2.5 seconds."
+  },
+  SummonerFlash: {
+    name: "Flash",
+    description:
+      "Teleports your champion a short distance toward your cursor's location."
+  }
+};
+
 export default ({ method, url }) => {
   return new Promise((resolve, reject) => {
     if (url.match(/\/champion.json$/)) {
@@ -95,6 +108,8 @@ export default ({ method, url }) => {
       process.nextTick(() => resolve({ data: { data: runes } }));
     } else if (url.match(/\/mastery.json$/)) {
       process.nextTick(() => resolve({ data: { data: masteries } }));
+    } else if (url.match(/\/summoner.json$/)) {
+      process.nextTick(() => resolve({ data: { data: summoners } }));
     }
   });
 };

@@ -1,6 +1,6 @@
 {
   "name": "riot-lol",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Library for Riot's League of Legends Static CDN Data",
   "main": "dist/index.js",
   "scripts": {
@@ -22,7 +22,9 @@
     "run-rune-map": "BABEL_ENV=test babel-node rune-mapper",
     "run-rune-test": "BABEL_ENV=test babel-node rune-test",
     "run-mastery-map": "BABEL_ENV=test babel-node mastery-mapper",
-    "run-mastery-test": "BABEL_ENV=test babel-node mastery-test"
+    "run-mastery-test": "BABEL_ENV=test babel-node mastery-test",
+    "run-summoner-map": "BABEL_ENV=test babel-node summoner-mapper",
+    "run-summoner-test": "BABEL_ENV=test babel-node summoner-test"
   },
   "keywords": [
     "riot",
