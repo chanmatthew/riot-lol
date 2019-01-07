@@ -9,22 +9,32 @@
 
 > Library for Riot's League of Legends Static CDN Data.
 
-## Install
+### Installation
 
 ```
 $ npm install --save riot-lol
 ```
 
-## Usage
+### Usage
+
+#### Import
 
 ```js
 import lol from "./lol-champions";
+```
 
+#### `getChampions()`
+
+```js
 lol.getChampions().then(champions => {
   console.log(champions);
 });
 //=> array of champions
+```
 
+#### `getChampion()`
+
+```js
 lol
   .getChampion({
     champion: "Aatrox"
@@ -36,12 +46,20 @@ lol
     console.log(err);
   });
 //=> sprite CSS of the champion "Aatrox"
+```
 
+#### `getItems()`
+
+```js
 lol.getItems().then(items => {
   console.log(items);
 });
 //=> array of items
+```
 
+#### `getItem()`
+
+```js
 lol
   .getItem({
     item: "Boots of Speed"
@@ -53,8 +71,12 @@ lol
     console.log(err);
   });
 //=> plain text description of the item "Boots of Speed"
+```
 
-// in the case of multiple items having the same name:
+#### `getItem()`
+For the cases in which multiple items share the same name.
+
+```js
 lol
   .getItem({
     item: "Enchantment: Warrior"
@@ -66,6 +88,31 @@ lol
     console.log(err);
   });
 //=> array of items with the name "Enchantment: Warrior"
+```
+
+#### `getRunes()`
+
+```js
+lol.getRunes().then(runes => {
+  console.log(runes);
+});
+//=> array of runes
+```
+
+#### `getRune()`
+
+```js
+lol
+  .getRune({
+    rune: "Lesser Glyph of Attack Damage"
+  })
+  .then(rune => {
+    console.log(rune.description);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//=> description of the rune "Lesser Glyph of Attack Damage"
 ```
 
 ## License
