@@ -50,6 +50,25 @@ const runes = {
   }
 };
 
+const masteries = {
+  "6351": {
+    name: "Precision",
+    description: [
+      "Gain 1.7 Lethality and 0.6 + 0.06 per level Magic Penetration",
+      "Gain 3.4 Lethality and 1.2 + 0.12 per level Magic Penetration",
+      "Gain 5.1 Lethality and 1.8 + 0.18 per level Magic Penetration",
+      "Gain 6.8 Lethality and 2.4 + 0.24 per level Magic Penetration",
+      "Gain 8.5 Lethality and 3 + 0.3 per level Magic Penetration"
+    ]
+  },
+  "6362": {
+    name: "Thunderlord's Decree",
+    description: [
+      "Your 3rd attack or damaging spell against the same enemy champion calls down a lightning strike, dealing magic damage in the area. <br><br>Damage: 10 per level, plus 30% of your Bonus Attack Damage, and 10% of your Ability Power (25-15 second cooldown, based on level)."
+    ]
+  }
+};
+
 export default ({ method, url }) => {
   return new Promise((resolve, reject) => {
     if (url.match(/\/champion.json$/)) {
@@ -74,6 +93,8 @@ export default ({ method, url }) => {
       process.nextTick(() => resolve({ data: { data: items } }));
     } else if (url.match(/\/rune.json$/)) {
       process.nextTick(() => resolve({ data: { data: runes } }));
+    } else if (url.match(/\/mastery.json$/)) {
+      process.nextTick(() => resolve({ data: { data: masteries } }));
     }
   });
 };
