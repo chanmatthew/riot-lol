@@ -53,9 +53,7 @@ test("fetches masteries data from the LoL static data cdn", async () => {
 });
 
 test("fetches Flash data from the LoL static data cdn", async () => {
-  const summoner = await lol.getSummoner({
-    summoner: "Flash"
-  });
+  const summoner = await lol.getSummoner("Flash");
   return expect(summoner.description).toEqual(
     "Teleports your champion a short distance toward your cursor's location."
   );
