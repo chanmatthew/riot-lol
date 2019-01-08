@@ -139,7 +139,7 @@ lol
 //=> array with the descriptions of the mastery "Precision"
 ```
 
-#### `getSummoner()`
+#### `getSummoners()`
 
 ```js
 lol.getSummoners().then(summoners => {
@@ -152,9 +152,7 @@ lol.getSummoners().then(summoners => {
 
 ```js
 lol
-  .getSummoner({
-    summoner: "Barrier"
-  })
+  .getSummoner("Barrier")
   .then(summoner => {
     console.log(summoner.description);
   })
@@ -168,9 +166,7 @@ For the cases in which multiple summoner spells share the same name:
 
 ```js
 lol
-  .getSummoner({
-    summoner: "Nexus Siege: Siege Weapon Slot"
-  })
+  .getSummoner("Nexus Siege: Siege Weapon Slot")
   .then(summoner => {
     console.log(summoner);
   })
