@@ -27,9 +27,7 @@ test("fetches items data from the LoL static data cdn", async () => {
 });
 
 test("fetches Lesser Glyph of Attack Damage data from the LoL static data cdn", async () => {
-  const rune = await lol.getRune({
-    rune: "Lesser Glyph of Attack Damage"
-  });
+  const rune = await lol.getRune("Lesser Glyph of Attack Damage");
   return expect(rune.description).toEqual("+0.16 attack damage");
 });
 
