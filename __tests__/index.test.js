@@ -39,9 +39,7 @@ test("fetches runes data from the LoL static data cdn", async () => {
 });
 
 test("fetches Thunderlord's Decree data from the LoL static data cdn", async () => {
-  const mastery = await lol.getMastery({
-    mastery: "Thunderlord's Decree"
-  });
+  const mastery = await lol.getMastery("Thunderlord's Decree");
   return expect(mastery.description).toEqual([
     "Your 3rd attack or damaging spell against the same enemy champion calls down a lightning strike, dealing magic damage in the area. <br><br>Damage: 10 per level, plus 30% of your Bonus Attack Damage, and 10% of your Ability Power (25-15 second cooldown, based on level)."
   ]);
