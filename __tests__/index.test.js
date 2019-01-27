@@ -51,3 +51,15 @@ test("fetches masteries data from the LoL static data cdn", async () => {
   const masteries = await lol.getMasteries();
   return expect(masteries.length).toBe(2);
 });
+
+test("fetches Flash data from the LoL static data cdn", async () => {
+  const summoner = await lol.getSummoner("Flash");
+  return expect(summoner.description).toEqual(
+    "Teleports your champion a short distance toward your cursor's location."
+  );
+});
+
+test("fetches summoner spells data from the LoL static data cdn", async () => {
+  const summoners = await lol.getSummoners();
+  return expect(summoners.length).toBe(2);
+});

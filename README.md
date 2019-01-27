@@ -139,6 +139,43 @@ lol
 //=> array with the descriptions of the mastery "Precision"
 ```
 
+#### `getSummoners()`
+
+```js
+lol.getSummoners().then(summoners => {
+  console.log(summoners);
+});
+//=> array of summoner spells
+```
+
+#### `getSummoner()`
+
+```js
+lol
+  .getSummoner("Barrier")
+  .then(summoner => {
+    console.log(summoner.description);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//=> description of the summoner spell "Barrier"
+```
+
+For the cases in which multiple summoner spells share the same name:
+
+```js
+lol
+  .getSummoner("Nexus Siege: Siege Weapon Slot")
+  .then(summoner => {
+    console.log(summoner);
+  })
+  .catch(err => {
+    console.log(err);
+  });
+//=> array of summoner spells with the name "Nexus Siege: Siege Weapon Slot"
+```
+
 ## License
 
 MIT
