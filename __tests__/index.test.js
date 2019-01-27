@@ -15,9 +15,7 @@ test("fetches champions data from the LoL static data cdn", async () => {
 });
 
 test("fetches Boots of Speed data from the LoL static data cdn", async () => {
-  const item = await lol.getItem({
-    item: "Boots of Speed"
-  });
+  const item = await lol.getItem("Boots of Speed");
   return expect(item.name).toEqual("Boots of Speed");
 });
 
