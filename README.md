@@ -36,9 +36,7 @@ lol.getChampions().then(champions => {
 
 ```js
 lol
-  .getChampion({
-    champion: "Aatrox"
-  })
+  .getChampion("Aatrox")
   .then(champion => {
     console.log(champion.spriteCss);
   })
@@ -61,9 +59,7 @@ lol.getItems().then(items => {
 
 ```js
 lol
-  .getItem({
-    item: "Boots of Speed"
-  })
+  .getItem("Boots of Speed")
   .then(item => {
     console.log(item.plaintext);
   })
@@ -77,9 +73,7 @@ For the cases in which multiple items share the same name:
 
 ```js
 lol
-  .getItem({
-    item: "Enchantment: Warrior"
-  })
+  .getItem("Enchantment: Warrior")
   .then(item => {
     console.log(item);
   })
@@ -102,9 +96,7 @@ lol.getRunes().then(runes => {
 
 ```js
 lol
-  .getRune({
-    rune: "Lesser Glyph of Attack Damage"
-  })
+  .getRune("Lesser Glyph of Attack Damage")
   .then(rune => {
     console.log(rune.description);
   })
@@ -127,9 +119,7 @@ lol.getMasteries().then(masteries => {
 
 ```js
 lol
-  .getMastery({
-    mastery: "Precision"
-  })
+  .getMastery("Precision")
   .then(mastery => {
     console.log(mastery.description);
   })
