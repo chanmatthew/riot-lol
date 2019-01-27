@@ -3,9 +3,7 @@ import lol from "../index";
 jest.mock("axios");
 
 test("fetches Aatrox data from the LoL static data cdn", async () => {
-  const champion = await lol.getChampion({
-    champion: "Aatrox"
-  });
+  const champion = await lol.getChampion("Aatrox");
   return expect(champion.id).toEqual("Aatrox");
 });
 
