@@ -20,7 +20,7 @@ $ npm install --save riot-lol
 #### Import
 
 ```js
-import lol from "./lol-champions";
+import lol from "riot-lol";
 ```
 
 #### `getChampions()`
